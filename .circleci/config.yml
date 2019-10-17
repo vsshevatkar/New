@@ -10,7 +10,14 @@ jobs:
       - run:
           name: Greeting
           command: echo Hello, world.
-
-      - run:
+          
+    build:
+     docker:
+      - image: debian:stretch
+      
+     steps:
+        - checkout
+        
+        - run:
           name: Print the Current Time
           command: date
